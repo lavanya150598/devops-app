@@ -5,15 +5,13 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/lavanya150598/devops-app.git'
+                checkout scm
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
-                sh 'node -v'
-                sh 'npm -v || echo "npm not found but continuing"'
+                echo "No tests yet"
             }
         }
 
