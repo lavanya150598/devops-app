@@ -1,7 +1,8 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    res.end("Hello Lavanya DevOps this is a webhook practise 🚀");
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end("🚀 Hello Lavanya DevOps - Webhook Working Fixed!");
 });
 
 server.listen(3000, () => {
