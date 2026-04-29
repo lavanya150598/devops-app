@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/lavanya150598/devops-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t maddikera412/devops-app:latest .'
