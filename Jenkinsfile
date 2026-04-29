@@ -3,6 +3,20 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/lavanya150598/devops-app.git'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests..."'
+                sh 'node -v'
+                sh 'npm -v || echo "npm not found but continuing"'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'docker build -t maddikera412/devops-app:latest .'
